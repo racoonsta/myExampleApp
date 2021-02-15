@@ -1,7 +1,6 @@
 <template>
   <div class="container">
   <img alt="Vue logo" class="img__logo" src="logo.png">
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   <h1>Страница выполнена с использованием библиотеки Vue JS 3 CLI</h1>
   <h2>Привожу примеры выполненных работ</h2>
     <div class="examples">
