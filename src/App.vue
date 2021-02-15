@@ -1,0 +1,110 @@
+<template>
+  <div class="container">
+  <img alt="Vue logo" class="img__logo" src="logo.png">
+  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <h1>Страница выполнена с использованием библиотеки Vue JS 3 CLI</h1>
+  <h2>Привожу примеры выполненных работ</h2>
+    <div class="examples">
+      <CardComponent v-for="card in cards"
+      :key="card.id"
+      :cardRecord = "card"
+      />
+    </div>
+  </div>
+</template>
+
+<script>
+import CardComponent from './components/CardComponent.vue'
+
+export default {
+  name: 'App',
+  data () {
+    return {
+      cards: [
+        {
+          id: 1,
+          sImage: './wordpress.png',
+          sLink: '',
+          sWork: 'Wordpress',
+          sTitle1: 'Статика',
+          sTitle2: false,
+          sTitle3: false,
+          sGithubLink: '',
+          sGithubLogo: false
+        },
+        {
+          id: 2,
+          sImage: './Uber.png',
+          sLink: '',
+          sWork: 'Uber',
+          sTitle1: 'Статика',
+          sTitle2: 'Адаптированно',
+          sTitle3: false,
+          sGithubLink: '',
+          sGithubLogo: false
+        },
+        {
+          id: 3,
+          sImage: './pulsmeter.png',
+          sLink: '',
+          sWork: 'Пульсометры',
+          sTitle1: 'Адаптированно',
+          sTitle2: 'Анимация',
+          sTitle3: 'сборщик: Webpack',
+          sGithubLink: 'https://github.com/racoonsta/pulse-on-webpack.git',
+          sGithubLogo: true
+        }
+      ]
+    }
+  },
+  components: {
+    CardComponent
+  }
+}
+</script>
+
+<style>
+#app {
+  display: block;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 16px;
+  min-width: 320px;
+}
+body {
+  margin: 0 0;
+}
+.container {
+  display: inherit;
+  max-width: 950px;
+  margin: 0 auto;
+}
+.img__logo {
+  width: 140px;
+  height: 140px;
+}
+h1 {
+  margin: 0 0;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #282e3b
+}
+h2 {
+  margin: 10px 0;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #282e3b
+}
+.examples {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+</style>
