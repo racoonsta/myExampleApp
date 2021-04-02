@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import CardComponent from './components/CardComponent.vue'
+import CardComponent from '@/components/CardComponent.vue'
 
 export default {
   name: 'App',
@@ -23,35 +23,29 @@ export default {
         {
           id: 1,
           sImage: './wordpress.png',
-          sLink: '',
           sWork: 'Wordpress',
           sTitle1: 'Статика',
-          sTitle2: false,
-          sTitle3: false,
-          sGithubLink: '',
-          sGithubLogo: false
+          sTitle2: '',
+          sTitle3: '',
+          sGithubLink: ''
         },
         {
           id: 2,
           sImage: './Uber.png',
-          sLink: '',
           sWork: 'Uber',
           sTitle1: 'Статика',
           sTitle2: 'Адаптированно',
-          sTitle3: false,
-          sGithubLink: '',
-          sGithubLogo: false
+          sTitle3: '',
+          sGithubLink: ''
         },
         {
           id: 3,
           sImage: './pulsmeter.png',
-          sLink: '',
           sWork: 'Пульсометры',
           sTitle1: 'Адаптированно',
           sTitle2: 'Анимация',
           sTitle3: 'сборщик: Webpack',
-          sGithubLink: 'https://github.com/racoonsta/pulse-on-webpack.git',
-          sGithubLogo: true
+          sGithubLink: 'https://github.com/racoonsta/pulse-on-webpack.git'
         }
       ]
     }
