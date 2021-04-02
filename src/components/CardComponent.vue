@@ -1,10 +1,6 @@
 <template>
   <div class="example-item">
     <div class="example__logo">
-      <!-- <a :href="cardRecord.sLink">
-          <img class="example__image"
-          :src="cardRecord.sImage" alt="Image">
-      </a> -->
     <URLGenerator
       v-bind:cardRecord="cardRecord"
     />
