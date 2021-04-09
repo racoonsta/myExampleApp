@@ -1,14 +1,18 @@
 <template>
-  <a :href=generatePageLink(cardRecord.id)>
-    <img class="example__image"
-    :src="cardRecord.sImage" alt="Image">
+  <a :href=generatePageLink(cardId)>
+    <slot></slot>
   </a>
 </template>
 
 <script>
 export default ({
   name: 'URLGenerator',
-  props: ['cardRecord'],
+  props: {
+    cardId: {
+      required: true,
+      type: Number
+    }
+  },
   methods: {
     generatePageLink (id) {
       const href = window.location.href

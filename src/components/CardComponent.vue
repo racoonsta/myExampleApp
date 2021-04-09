@@ -2,8 +2,10 @@
   <div class="example-item">
     <div class="example__logo">
     <URLGenerator
-      v-bind:cardRecord="cardRecord"
-    />
+      v-bind:cardId="cardRecord.id">
+      <img class="example__image"
+      :src="cardRecord.sImage" alt="Image">
+    </URLGenerator>
     </div>
     <div class="example__title">
       <span>{{ cardRecord.sWork }}</span>
@@ -31,15 +33,21 @@
 import URLGenerator from '@/components/URLGenerator.vue'
 export default {
   name: 'CardComponent',
-  props: ['cardRecord'],
+  props: {
+    cardRecord: {
+      required: true,
+      type: Object
+    }
+  },
   components: {
     URLGenerator
   }
 }
 </script>
 
-<style scoped>
-  .example-item {
+<style lang="scss">
+  .example {
+    &-item {
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -50,40 +58,41 @@ export default {
     border-radius: 5px;
     width: 260px;
     min-height: 420px;
-  }
-  .example__logo {
-    opacity: 0.8;
-  }
-  .example__logo:hover {
-    opacity: 1;
-    cursor: pointer;
-  }
-  .example__title span {
-    font-weight: 700;
-    font-size: 18px;
-  }
-  .example__descr {
-    display: block;
-    min-height: 80px;
-  }
-  .example__descr ul {
-    min-width: 180px;
-  }
-  .example__descr li {
-    text-align: left;
-  }
-  .example__footer img {
-    display: block;
-    position: relative;
-    width: 64px;
-    height: 64px;
-  }
-  .example__footer a {
-    cursor: pointer;
+    }
+    &__logo {
+      opacity: 0.8;
+    }
+    &__logo:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+    &__title span {
+      font-weight: 700;
+      font-size: 18px;
+    }
+    &__descr {
+      display: block;
+      min-height: 80px;
+    }
+    &__descr ul {
+      min-width: 180px;
+    }
+    &__descr li {
+      text-align: left;
+    }
+    &__footer img {
+      display: block;
+      position: relative;
+      width: 64px;
+      height: 64px;
+    }
+    &__footer a {
+      cursor: pointer;
+    }
   }
   .github__disabled {
-    opacity: 0.5;
-    cursor: default;
+  opacity: 0.5;
+  cursor: default;
   }
   @media (max-width: 786px) {
   .example__logo {
