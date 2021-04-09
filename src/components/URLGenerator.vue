@@ -22,7 +22,7 @@ export default ({
 })
 </script>
 
-<style scoped>
+<style lang="scss">
   .example__image {
     padding: 5px 5px;
     position: relative;
