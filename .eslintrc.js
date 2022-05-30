@@ -7,8 +7,8 @@ module.exports = {
     'plugin:vue/vue3-essential',
     '@vue/standard'
   ],
-  parserOptions: {
-    parser: 'babel-eslint'
+  parserOptions: { /// 
+    "parser": "@babel/eslint-parser",
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',

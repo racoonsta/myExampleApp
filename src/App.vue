@@ -1,7 +1,7 @@
 <template>
   <div class="container">
   <img alt="Vue logo" class="img__logo" src="logo.png">
-  <h1>Страница выполнена с использованием библиотеки Vue JS 3 CLI</h1>
+  <h1>Страница выполнена с использованием библиотеки Vue JS 3</h1>
   <h2>Привожу примеры выполненных работ</h2>
     <div class="examples">
       <CardComponent v-for="card in cards"
@@ -43,8 +43,8 @@ export default {
           sImage: './pulsmeter.png',
           sWork: 'Пульсометры',
           sTitle1: 'Адаптированно',
-          sTitle2: 'Анимация',
-          sTitle3: 'сборщик: Webpack',
+          sTitle2: 'JavaScript',
+          sTitle3: 'Webpack',
           sGithubLink: 'https://github.com/racoonsta/pulse-on-webpack.git'
         }
       ]
