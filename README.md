@@ -1,4 +1,4 @@
-# enot-cv
+#Example App
 
 ## Project setup
 ```
