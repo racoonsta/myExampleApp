@@ -45,7 +45,7 @@ export default {
           sTitle1: 'Адаптированно',
           sTitle2: 'JavaScript',
           sTitle3: 'Webpack',
-          sGithubLink: 'https://github.com/racoonsta/pulse-on-webpack.git'
+          sGithubLink: 'https://github.com/racoonsta/pulse-webpack.git'
         }
       ]
     }
